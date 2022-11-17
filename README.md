@@ -19,4 +19,4 @@ This will generate a latex file containing graphs that should match those presen
 
 Do note that the point GQF test can take a while, especially on more modern GPUS due to lock thrashing. The test will eventually complete so just leave it be. On an A100 with 16GB of memory the entire testing suite completed in ~20 minutes.
 
-I tested this setup on NERSC's Cori and Perlmutter, if something breaks or you have any questions feel free to reach out to hunter@cs.utah.edu.
+I tested this setup on NERSC's Cori and Perlmutter, if something breaks or you have any questions feel free to reach out to hunter@cs.utah.edu and I can fix it.
