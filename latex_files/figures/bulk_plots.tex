@@ -1,0 +1,60 @@
+\begin{figure*}
+   \centering
+   \ref{bulklegend}\\
+   \begin{subfigure}{0.32\linewidth}
+      \begin{tikzpicture}
+         \begin{axis}[
+               AggregatePlot,
+               legend entries={\color{black}TCF, \color{black}GQF, \color{black}RSQF, \color{black}SQF},
+               legend columns=4,
+               legend to name={bulklegend}
+            ]
+
+            
+
+         \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/inserts.txt};
+         \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/bulk_gqf/gqf-aggregate-insert.txt};
+         \addplot[RSQF]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-insert.txt};
+         \addplot[SQFStyle]    table[x=x_0, y=y_0] {../data/sqf/sqf-aggregate-insert.txt};
+          
+         \end{axis}
+      \end{tikzpicture}
+      \caption{Inserts.}
+      \label{fig:agg-inserts}
+   \end{subfigure}%
+   \begin{subfigure}{0.32\linewidth}
+      \begin{tikzpicture}
+         \begin{axis}[
+               AggregatePlot
+            ]
+
+         \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/queries.txt};
+         \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/bulk_gqf/gqf-aggregate-exists-lookup.txt};
+         \addplot[RSQF]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-exists-lookup.txt};
+         \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/sqf/sqf-aggregate-exists-lookup.txt};
+
+         \end{axis}
+      \end{tikzpicture}
+      \caption{Positive Queries.}
+      \label{fig:agg-exists}
+   \end{subfigure}%
+   \begin{subfigure}{0.32\linewidth}
+      \begin{tikzpicture}
+         \begin{axis}[
+               AggregatePlot
+            ]
+
+         \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/fp.txt};
+         \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/bulk_gqf/gqf-aggregate-false-lookup.txt};
+         \addplot[RSQF]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-false-lookup.txt};
+         \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/sqf/sqf-aggregate-false-lookup.txt};
+
+         \end{axis}
+      \end{tikzpicture}
+      \caption{Random Queries.}
+      \label{fig:agg-false}
+   \end{subfigure}%
+\caption{Performance for various bulk filters grouped by filter size. The experiments were performed on your computer. The x-axis shows $\log{n}$, where $n$ is the number of slots in the filter. SQF and RSQF only support up to $2^{26}$ slots.}
+\label{fig:agg_perf}
+\vspace{-0.5em}
+\end{figure*}
