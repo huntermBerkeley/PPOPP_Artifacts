@@ -24,7 +24,8 @@ print("Pulling Repos for Point TCF/Warpcore")
 
 os.mkdir(tcf_directory)
 os.chdir(tcf_directory)
-os.system("cmake ..")
+
+os.system("cmake .. -DCPM_poggers_SOURCE=../../poggers")
 os.system("make clean && make")
 os.chdir(root)
 

@@ -18,28 +18,28 @@ def clipe6(input_string):
 root = os.getcwd()
 
 
-# os.mkdir(root + "/data")
-# os.mkdir(root + "/data/point_gqf")
-# os.mkdir(root + "/data/bulk_gqf")
-# os.mkdir(root + "/data/rsqf")
-# os.mkdir(root + "/data/sqf")
-# os.mkdir(root + "/data/bloom")
-# os.mkdir(root + "/data/blocked_bloom")
-# os.mkdir(root + "/data/point_tcf")
-# os.mkdir(root + "/data/bulk_tcf")
+os.mkdir(root + "/data")
+os.mkdir(root + "/data/point_gqf")
+os.mkdir(root + "/data/bulk_gqf")
+os.mkdir(root + "/data/rsqf")
+os.mkdir(root + "/data/sqf")
+os.mkdir(root + "/data/bloom")
+os.mkdir(root + "/data/blocked_bloom")
+os.mkdir(root + "/data/point_tcf")
+os.mkdir(root + "/data/bulk_tcf")
 
 
-# #move GQF data
-# os.system("cp " + root + "/gqf/results/aggregate/gqf* " + root + "/data/bulk_gqf" )
-# os.system("cp " + root + "/gqf/results/aggregate/point* " + root + "/data/point_gqf" )
-# os.system("cp " + root + "/gqf/results/aggregate/sqf* " + root + "/data/sqf" )
-# os.system("cp " + root + "/gqf/results/aggregate/rsqf* " + root + "/data/rsqf" )
-# os.system("cp " + root + "/gqf/results/aggregate/bloom* " + root + "/data/bloom")
+#move GQF data
+os.system("cp " + root + "/gqf/results/aggregate/gqf* " + root + "/data/bulk_gqf" )
+os.system("cp " + root + "/gqf/results/aggregate/point* " + root + "/data/point_gqf" )
+os.system("cp " + root + "/gqf/results/aggregate/sqf* " + root + "/data/sqf" )
+os.system("cp " + root + "/gqf/results/aggregate/rsqf* " + root + "/data/rsqf" )
+os.system("cp " + root + "/gqf/results/aggregate/bloom* " + root + "/data/bloom")
 
-# #move point tcf/bbloom data
-# #Already aggregated!
-# os.system("cp " + root + "/pog_warp_tests/build/bloom_results/test_aggregate* " + root + "/data/blocked_bloom")
-# os.system("cp " + root + "/pog_warp_tests/build/results/test_aggregate* " + root + "/data/point_tcf")
+#move point tcf/bbloom data
+#Already aggregated!
+os.system("cp " + root + "/pog_warp_tests/build/bloom_results/test_aggregate* " + root + "/data/blocked_bloom")
+os.system("cp " + root + "/pog_warp_tests/build/results/test_aggregate* " + root + "/data/point_tcf")
 
 
 #finally move bulk TCF
