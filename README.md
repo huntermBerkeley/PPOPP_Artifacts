@@ -5,13 +5,12 @@ This directory contains the code needed download, build, run, and visualize the 
 
 USE
 ----------------------------
-'''
+```
 chmod +x run_full_battery.sh
 ./run_full_battery.sh
 cd latex_files
 pdflatex -output-directory .. artifact_figures.tex
-
-'''
+```
 
 This will generate a latex file containing graphs that should match those presented in the paper!
 
