@@ -27,6 +27,7 @@ os.mkdir(root + "/data/bloom")
 os.mkdir(root + "/data/blocked_bloom")
 os.mkdir(root + "/data/point_tcf")
 os.mkdir(root + "/data/bulk_tcf")
+os.mkdir(root + "/data/deletes")
 
 
 #move GQF data
@@ -93,6 +94,92 @@ with open(output_tcf_directory + "/fp.txt",'w') as fp_file:
    i=0
    for nbits in range(22,31, 2):
    	fp_file.write("{} {}\n".format(nbits, clipe6(fp_vals[i])))
+   	i+=1
+
+
+#now move GQF and SQF deletion data
+
+# bulk_delete_directory = root + "/bulk-tcf/build/batched_results/"
+
+output_gqf_directory = root + "/data/deletes"
+
+
+gqf_delete_vals = []
+
+for nbits in range(22,31,2):
+
+	file_id = root + "/gqf/results/deletes/gqf_deletes_" + str(nbits) + "-deletions.txt"
+
+	with open(file_id, "r") as gqf_del_file:
+
+		lines = gqf_del_file.readlines()
+
+		#clip first line
+		lines = lines[1:]
+
+		#quick and dirty aggregation here
+		line_inverted_sum = 0;
+
+		for line in lines:
+
+			
+			data = float(line.split(" ")[-1])
+
+			line_inverted_sum += 1.0/data
+
+		agg_result = 20.0/line_inverted_sum
+
+		gqf_delete_vals.append(agg_result)
+
+
+with open(output_gqf_directory + "/gqf.txt",'w') as gqf_file:
+   gqf_file.write("x_0 y_0\n")
+
+   i=0
+   for nbits in range(22,31, 2):
+   	gqf_file.write("{} {}\n".format(nbits, gqf_delete_vals[i]))
+   	i+=1
+
+
+bulk_delete_directory = root + "/bulk-tcf/build/batched_results/"
+
+output_sqf_directory = root + "/data/deletes"
+
+
+sqf_delete_vals = []
+
+for nbits in range(22,27,2):
+
+	file_id = root + "/gqf/results/deletes/sqf_deletes_" + str(nbits) + "-deletions.txt"
+
+	with open(file_id, "r") as sqf_del_file:
+
+		lines = sqf_del_file.readlines()
+
+		#clip first line
+		lines = lines[1:]
+
+		#quick and dirty aggregation here
+		line_inverted_sum = 0;
+
+		for line in lines:
+
+			
+			data = float(line.split(" ")[-1])
+
+			line_inverted_sum += 1.0/data
+
+		agg_result = 20.0/line_inverted_sum
+
+		sqf_delete_vals.append(agg_result)
+
+
+with open(output_sqf_directory + "/sqf.txt",'w') as sqf_file:
+   sqf_file.write("x_0 y_0\n")
+
+   i=0
+   for nbits in range(22,27, 2):
+   	sqf_file.write("{} {}\n".format(nbits, sqf_delete_vals[i]))
    	i+=1
 
 

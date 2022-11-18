@@ -20,6 +20,7 @@ os.system('./scripts/run_all_tests.sh "results"')
 print("Done generating data, aggregating results...")
 os.mkdir(gqf_results_directory)
 os.system("python3 scripts/aggregate_local_data.py")
+os.system('./scripts/run_deletes.sh')
 
 os.chdir(root)
 
@@ -49,4 +50,7 @@ os.system("./batched_template_tests 28 1 test")
 os.system("./presorted_template_tests 30 1 test")
 
 os.chdir(root)
+
+
+#Need to run SQF and GQF deletion tests!
 

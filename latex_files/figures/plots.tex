@@ -51,10 +51,10 @@
 \pgfplotsset{
   DeletePlot/.style={
     small,
-    width = \linewidth + 10pt,
-    height=0.60\linewidth,
+    width = 0.8\linewidth,
+    height=0.50\linewidth,
     xlabel={Filter Size},
-    ylabel={Throughput (Billion/s)},
+    ylabel={Throughput (M/s)},
     xlabel near ticks,
     x label style={at={(0.5,-0.12)},font=\small},
     scaled y ticks = base 10:-3,
@@ -67,11 +67,10 @@
     yticklabel style={ /pgf/number format/fixed },
     ymajorgrids,
     yminorgrids,
-    ymin=0,
     minor tick num=1,
     minor grid style={draw=gray!25},
   },
-}
+} 
 
 \pgfplotsset{
   HistoPlot/.style={
@@ -185,8 +184,22 @@
 \pgfplotsset{
   QFNLStyle/.style     = {color = teal,       mark = square*},
   QFLStyle/.style     = {color = orange,       mark = triangle*},
-  BFStyle/.style     = {color = red,       mark = diamond*},
-  BF1BStyle/.style     = {color = violet,       mark = asterisk},
-  SQFStyle/.style     = {color = cyan,       mark = pentagon*},
-  RSQFStyle/.style     = {color = gray,       mark = otimes*}
+  sortedStyle/.style     = {color = red,       mark = diamond*},
+  constStyle/.style     = {color = violet,       mark = asterisk},
+  dynamicStyle/.style     = {color = cyan,       mark = pentagon*},
+  staticStyle/.style     = {color = gray,       mark = pentagon*},
+  BloomStyle/.style     = {color = gray,       mark = triangle*},
+  SQFStyle/.style     = {color = orange,       mark = pentagon*},
+  RSQFStyle/.style     = {color = violet,       mark = diamond*},
+  BBloomStyle/.style     = {color = magenta,       mark = diamond*},
+  GQFStyle/.style     = {color = red,       mark = *},
+  TCFStyle/.style     = {color = teal,       mark = square*},
+  88Style/.style     = {color = teal,       mark = square*},
+  128Style/.style     = {color = orange,       mark = triangle*},
+  1212Style/.style     = {color = red,       mark = diamond*},
+  1216Style/.style     = {color = violet,       mark = asterisk},
+  1632Style/.style     = {color = gray,       mark = triangle*},
+  1232Style/.style     = {color = cyan,       mark = pentagon*},
+  1616Style/.style     = {color = gray,       mark = pentagon*},
+  1216UnalignedStyle/.style = {color = orange,       mark = pentagon*},
 }

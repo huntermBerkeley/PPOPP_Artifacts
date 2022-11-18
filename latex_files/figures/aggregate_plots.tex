@@ -14,8 +14,8 @@
 
          \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/point_tcf/test_aggregate_inserts.txt};
          \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/point_gqf/point-aggregate-insert.txt};
-         \addplot[BFStyle]    table[x=x_0, y=y_0] {../data/bloom/bloom-aggregate-insert.txt};
-         \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/blocked_bloom/test_aggregate_inserts.txt};
+         \addplot[BloomStyle]    table[x=x_0, y=y_0] {../data/bloom/bloom-aggregate-insert.txt};
+         \addplot[BBloomStyle]   table[x=x_0, y=y_0] {../data/blocked_bloom/test_aggregate_inserts.txt};
           
          \end{axis}
       \end{tikzpicture}
@@ -30,8 +30,8 @@
 
          \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/point_tcf/test_aggregate_lookup.txt};
          \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/point_gqf/point-aggregate-exists-lookup.txt};
-         \addplot[BFStyle]    table[x=x_0, y=y_0] {../data/bloom/bloom-aggregate-exists-lookup.txt};
-         \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/blocked_bloom/test_aggregate_lookup.txt};
+         \addplot[BloomStyle]    table[x=x_0, y=y_0] {../data/bloom/bloom-aggregate-exists-lookup.txt};
+         \addplot[BBloomStyle]   table[x=x_0, y=y_0] {../data/blocked_bloom/test_aggregate_lookup.txt};
 
          \end{axis}
       \end{tikzpicture}
@@ -46,8 +46,8 @@
 
          \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/point_tcf/test_aggregate_fp.txt};
          \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/point_gqf/point-aggregate-false-lookup.txt};
-         \addplot[BFStyle]    table[x=x_0, y=y_0] {../data/bloom/bloom-aggregate-false-lookup.txt};
-         \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/blocked_bloom/test_aggregate_fp.txt};
+         \addplot[BloomStyle]    table[x=x_0, y=y_0] {../data/bloom/bloom-aggregate-false-lookup.txt};
+         \addplot[BBloomStyle]   table[x=x_0, y=y_0] {../data/blocked_bloom/test_aggregate_fp.txt};
 
          \end{axis}
       \end{tikzpicture}

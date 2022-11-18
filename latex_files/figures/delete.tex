@@ -1,0 +1,22 @@
+\begin{figure}
+   \centering
+   \ref{agg-delete-legend-load}\\
+      \begin{tikzpicture}
+         \begin{axis}[
+               ymode=log,
+               log ticks with fixed point,
+               DeletePlot,
+               legend entries={\color{black}GQF-Bulk,  \color{black}SQF, \color{black}TCF},
+               legend columns=3,
+               legend to name={agg-delete-legend-load}
+            ]
+          \addplot[GQFStyle]  table[x=x_0, y=y_0] {data/deletes/gqf.txt};
+          \addplot[SQFStyle]   table[x=x_0, y=y_0] {data/deletes/sqf.txt};
+          \addplot[TCFStyle]   table[x=x_0, y=y_0] {data/point_tcf/test_aggregate_deletes.txt};
+         \end{axis}
+      \end{tikzpicture}
+      \vspace{-0.5em}
+      \caption{Deletion performance of GQF bulk, SQF, and TCF on your computer. The x-axis shows $\log{n}$, where $n$ is the number of slots in the filter. SQF only support up to $2^{26}$ slots.}
+      \label{fig:agg-deletes}
+      \vspace{-2.0em}
+\end{figure}

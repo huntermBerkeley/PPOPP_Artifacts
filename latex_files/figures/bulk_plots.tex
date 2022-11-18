@@ -12,9 +12,9 @@
 
             
 
-         \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/inserts.txt};
+         \addplot[TCFStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/inserts.txt};
          \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/bulk_gqf/gqf-aggregate-insert.txt};
-         \addplot[RSQF]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-insert.txt};
+         \addplot[RSQFStyle]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-insert.txt};
          \addplot[SQFStyle]    table[x=x_0, y=y_0] {../data/sqf/sqf-aggregate-insert.txt};
           
          \end{axis}
@@ -28,9 +28,9 @@
                AggregatePlot
             ]
 
-         \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/queries.txt};
+         \addplot[TCFStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/queries.txt};
          \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/bulk_gqf/gqf-aggregate-exists-lookup.txt};
-         \addplot[RSQF]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-exists-lookup.txt};
+         \addplot[RSQFStyle]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-exists-lookup.txt};
          \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/sqf/sqf-aggregate-exists-lookup.txt};
 
          \end{axis}
@@ -44,9 +44,9 @@
                AggregatePlot
             ]
 
-         \addplot[QFNLStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/fp.txt};
+         \addplot[TCFStyle]   table[x=x_0, y=y_0] {../data/bulk_tcf/fp.txt};
          \addplot[QFLStyle]   table[x=x_0, y=y_0] {../data/bulk_gqf/gqf-aggregate-false-lookup.txt};
-         \addplot[RSQF]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-false-lookup.txt};
+         \addplot[RSQFStyle]    table[x=x_0, y=y_0] {../data/rsqf/rsqf-aggregate-false-lookup.txt};
          \addplot[SQFStyle]   table[x=x_0, y=y_0] {../data/sqf/sqf-aggregate-false-lookup.txt};
 
          \end{axis}
